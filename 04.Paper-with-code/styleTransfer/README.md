@@ -5,6 +5,9 @@
     <img src="images/1.PNG">
 </p>
 
+# 01. Pre-trained Model
+- MNIST(0~9를 나타내는 흑백 이미지)를 높은 정확도로 인식하기 위해서는 최소 3개의 Convolution layer와 1개의 fully connected layer가 필요하며 이때 전체 학습에 소요되는 시간은 1개의 CPU 환경에서 약 1시간 10분 소요
+
 <p align="left">
     <img src="images/2.PNG">
 </p>
