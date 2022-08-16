@@ -38,9 +38,15 @@
 <p align="left">
     <img src="images/9.PNG">
 </p>
+
+- 이미지 스타일 트랜스퍼를 조금 더 수식적으로 표현하기 위해서 논문의 수식을 살펴보면, 각각의 이미지를 이헐게 벡터로 표현한 이유는 사실 한 장의 이미지는 이런식으로 세로축과 가로축으로 구성된 한 장의 행렬과 같은 데이터라고 볼 수 있지만 이런 이미지 또한 그냥 왼쪽 위부터 쭉 일렬로 나열하는 방식으로 하나의 벡터로써 표현할 수 있기 때문에 하나의 미이지를 표현할 때 벡터 형태의 변수로써 표현하게 됩니다.
+
 <p align="left">
     <img src="images/10.PNG">
 </p>
+
+- 일반적으로 CNN에서 layer가 깊어질수록 채널의 수가 많아지고 너비와 높이는 줄어들며 convolution layer의 서로 다른 필터들은 각각 적절한 특징(feature)값을 추출하도록 학습합니다.
+
 <p align="left">
     <img src="images/11.PNG">
 </p>
@@ -61,6 +67,11 @@
 <p align="left">
     <img src="images/13.PNG">
 </p>
+
+- 최종적으로 이러한 gram matrix의 값 자체를 그 이미지의 style이라고 볼 수 있습니다.
+- style loss라는 것은 이러한 gram matrix를 사용하는 것이고 두 이미지의 gram matrix의 값이 같도록 만들어서 두 이미지의 style 값이 유사할 수 있도록 만드는 방식으로 동작합니다.
+- style loss를 구할 때 어떤 layer를 사용할지 미리 결정해놓은 그 값에 따라서 각각의 layer에 대해서 전부 다 El 값을 구한 뒤에 전부 다 손실값을 줄일 수 있는 형태로 update를 진행한다고 볼 수 있습니다. Wl의 경우는 어떤 레이어에 더 많은 가중치를 둘지 설정하기 위해서 넣어주는 hyperparameter입니다.
+
 <p align="left">
     <img src="images/14.PNG">
 </p>
